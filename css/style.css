@@ -1,0 +1,129 @@
+p.description{
+	font-size: 1.3333em;
+	line-height: 1.2em;
+	 margin: 0.5em 0;
+	 color: #000;
+	 font-family: 'Josefin Sans', sans-serif;
+}
+p{
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+h4{
+	font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+body {
+   font-size: 20px;
+   -webkit-box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+}
+.companies{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 3.6em;
+}
+a{
+	color:#000;
+}
+.companies a{
+	width:31.33333%;
+	margin-right: 2%;
+	display: flex;
+	margin-bottom: 2em;
+	text-decoration: none;
+	opacity: .7;
+}
+.companies a.colony .logo{
+	background-image: url('../img/logo-Colony.png'); 
+}
+.companies a .logo{
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin-right: 50px;
+	background-image: url('../img/logo-placeholder.png');
+	background-size: 55px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	flex-shrink: 0;
+}
+.companies a h4{
+	font-size: 1.2222em;
+	margin: 0;
+	margin-top: .25em;
+}
+h4{
+	display: block;
+	-webkit-margin-before: 1.33em;
+	-webkit-margin-after: 1.33em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+}
+.companies a.aligni .logo{
+	background-image: url('../img/logo-aligni.png'); 
+}
+.companies a.rubitec .logo{
+	background-image: url('../img/logo-rubitec.png'); 
+}
+.companies a.ife .logo{
+	background-image: url('../img/logo-ife.png'); 
+}
+.companies a.odio .logo{
+	background-image: url('../img/logo-odio.jpg'); 
+}
+.companies a.bestwestern .logo{
+	background-image: url('../img/logo-bestwestern.jpg'); 
+}
+#test{
+	color: #CD5C5C;
+}
+h1{
+	color: #000;
+	font-family: 'Quicksand', sans-serif;
+	display: block;
+	font-weight: bold;
+}
+
+@media(max-width: 600px){
+	.companies a{
+    width: 100%;
+}
+}
+@media(max-width: 600px){
+	article{
+    width: 100%;
+}
+}
+.contact{
+	margin-top: 1em;
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+a:hover{
+	color:#CD5C5C;
+}
+
+a:active{
+	color: #000;
+}
