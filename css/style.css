@@ -1,3 +1,6 @@
+.under {
+	text-decoration: underline;
+}
 p.description{
 	font-size: 1.3333em;
 	line-height: 1.2em;
@@ -12,7 +15,7 @@ p{
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 h4{
 	font-family: 'Quicksand', sans-serif;
