@@ -1,0 +1,84 @@
+body {
+  font-family: 'Cousine', sans-serif;
+  color: #222;
+  line-height: 1.8em
+}
+h1 {
+  color: #000
+}
+h2, h3 {
+  color: #200263
+}
+h3 {
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+h3::after {
+  position: absolute;
+  height: 10px;
+  z-index: -1;
+  content: "\00A0";
+  width: 20px;
+  bottom: 7px;
+  left: -10px;
+  display: block;
+  background-color: #c09fe4
+}
+a {
+  text-decoration: underline;
+  color: #3437c8
+}
+a:hover {
+  text-decoration: underline;
+}
+nav a {
+  color: #667;/*200263*/;
+  font-weight: bold
+}
+nav a.active {
+  color: #ea1c24;
+}
+strong {
+  color: #000;
+}
+.fade {
+  color: #888;
+}
+.highlight {
+  background-color: #fafee1
+}
+ul {
+}
+li {
+  margin: 10px 0
+}
+
+section {
+  margin: 50px 0
+}
+code {
+  border: none;
+  background-color: transparent;
+}
+pre > code {
+  color: #ddd;
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+  overflow-x: scroll;
+}
+p > code,
+li > code {
+  background-color: #d8efe0;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-weight: bold
+}
+.colophon {
+  background-color: #f1f6fb
+}
+
+#profile-image {
+  align-content: right
+}
