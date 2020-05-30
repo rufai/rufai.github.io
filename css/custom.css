@@ -2,6 +2,10 @@ body {
   font-family: 'Cousine', sans-serif;
   color: #222;
   line-height: 1.8em
+  /*margin: 0 auto;*/
+  /*width: 100%;*/
+  /*max-width: 68rem;*/
+
 }
 h1 {
   color: #000
@@ -81,4 +85,14 @@ li > code {
 
 #profile-image {
   align-content: right
+}
+.nav-link li {
+  margin: 2rem; 
+  list-style: disc;
+  display: inline;    
+}
+
+@media screen and (min-width: 550px) {
+    body {
+      padding: 4rem;
 }
