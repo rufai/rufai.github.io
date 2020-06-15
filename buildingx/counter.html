@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<style type="text/css">
+		body {
+			display: block;
+			margin: auto;
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Counter</h1>
+	<h3>How it works?</h3>
+		<ul>
+			
+			<li>You click on the button below</li>
+			<li> the increase/descrease button will add/remove 1 from the current counter value</li>
+			<li> the reset button will return the value to 0</li>
+			<li>positive/negative numbers are highlighted by green/red</li>
+			<li>zero is highlighted with black #000</li>
+
+		</ul>
+
+	<h2><span id="target"></span></h2>
+
+	<button id="reduce">Reduce</button>
+	<button id="reset">Reset</button>
+	<button id="increase">Increase</button>
+
+
+
+</body>
+
+<script type="text/javascript">
+	
+	let counter = 0
+
+	let target = document.getElementById("target")
+
+	let reduce = document.getElementById("reduce")
+	let reset = document.getElementById("reset")
+	let increase = document.getElementById("increase")
+
+	reduce.addEventListener("click", (event) => {
+		console.log(event.target, counter)
+		counter -= 1	
+		changeCounterColor(counter)	
+		target.textContent = counter
+	})
+
+	reset.addEventListener("click", (event) => {
+		console.log(event.target, counter)
+		counter = 0
+		changeCounterColor(counter)
+		target.textContent = counter
+	})
+
+	increase.addEventListener("click", (event) => { 
+		console.log(event.target,counter)
+		counter += 1
+		changeCounterColor(counter)
+		target.textContent = counter
+	})
+
+	function changeCounterColor(counter) {
+		if ( counter === 0 )
+		{
+			target.style.color = "black"
+		}
+		else if ( counter < 0 )
+		{
+			target.style.color = "red"
+		}
+		else {
+			target.style.color = "green"
+		}
+
+	}
+
+
+</script>
+</html>
