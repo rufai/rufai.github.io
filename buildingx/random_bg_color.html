@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Background Randomly</title>
+	<style type="text/css">
+		body{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 id="h">Change Background Randomly</h1>
+		<h3>How it works?</h3>
+		<ul>
+			
+			<li>You click on the button below</li>
+			<li> a color will be generated randomly</li>
+			<li> the body backgroundColor will be set to this color</li>
+		</ul>
+		<p id="p">The current background is <span id="s"></span></p>
+		<button id="b">Change Background</button>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	const hex = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','F']
+
+	
+
+	let btn = document.getElementById('b')
+	let bgColor = document.getElementById('s')
+
+	
+	  //addEventListener
+	btn.addEventListener("click", (event) => {
+		
+		console.log(event)
+
+		let randomColor = "#"
+
+		for (var i = 0; i < 6; i++) {
+			randomColor += hex[getRandomNumber()]
+		}
+
+		document.body.style.backgroundColor  = randomColor
+		bgColor.textContent = randomColor 
+		
+
+	})
+
+	function getRandomNumber() {
+		
+		return Math.floor(Math.random() * hex.length)
+
+	}
+</script>
+</html>
