@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Country & Capital</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	
+
+	 <style type="text/css">
+	 	body {
+	 		display: block;
+	 		margin: auto;
+	 		width: 40%;
+	 	}
+	 </style>
+</head>
+<body>
+	
+		<h1>Random Country Flag Generator</h1>
+		<h3>How it works?</h3>
+		<ul>			
+			<li>You click on the button below</li>
+			<li> the increase/descrease button will add/remove 1 from the current counter value</li>
+			<li> the reset button will return the value to 0</li>
+			<li>positive/negative numbers are highlighted by green/red</li>
+			<li>zero is highlighted with black #000</li>
+		</ul>
+
+	<button> Find a country</button>
+
+	<div id="container">
+		<img id="countryFlag" />
+		<p id="countryName"></p>
+	</div>
+</body>
+
+<script type="text/javascript" src="flag-emojis.pretty.json"></script>
+<script type="text/javascript" src="country_images.json"></script>
+
+<script type="text/javascript">
+	
+	let c = document.getElementById('container')
+	let btn = document.querySelector("button")
+
+	btn.addEventListener("click", (event) => {
+		
+		let countryFlag = document.querySelector("img")
+		let p = document.getElementById("countryName")
+
+		let len  = countryWithImages.length
+		let randomNumber = Math.floor(Math.random() * len)
+
+		//console.log(event.target, randomNumber)
+
+		let countryFlagURL = countryWithImages[randomNumber].file_url
+		
+		countryFlag.setAttribute('src', "https:"+countryFlagURL )
+		countryFlag.setAttribute('width', 200 )
+		countryFlag.setAttribute('height', 200 )
+
+		console.log(countryWithImages[randomNumber].name)
+
+		let content = countryWithImages[randomNumber].name + " "  + countryWithImages[randomNumber].alpha3
+
+		p.innerText = content
+		d.appendChild(p)
+		d.appendChild(countryFlag)
+		c.appendChild(d)
+	})
+
+
+
+</script>
+</html>
