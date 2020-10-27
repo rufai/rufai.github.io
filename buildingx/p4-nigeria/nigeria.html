@@ -2,33 +2,51 @@
 <html>
 <head>
 	<title>Nigeria States</title>
-	<script type="text/javascript" src="nigeria.json"></script>
+	<style type="text/css">
+	 	body {
+	 		display: block;
+	 		margin: auto;
+	 		width: 40%;
+	 		padding: 5px;
+	 	}
+	 </style>
 
 </head>
 <body>
-	<select>
-		<optgroup>	
-			<option>Adamawa</option>
-			<option>Yola</option>
-			<option>Bornu</option>
-		</optgroup>
-		<optgroup>	
-			<option>Adamawa</option>
-			<option>Yola</option>
-			<option>Bornu</option>
-		</optgroup>
-	</select>
 
+	<h1>States & LGAs </h1>
+	<h3>How it works?</h3>
+	<ul>			
+		<li>Click on state in the drop-down</li>
+		<li>it will list the LGA's under it </li>
 	
-	<select id="states">
-		
-		
-	</select>
+	</ul>
+	
+	<div>
+		<p>Select A State</p>
+		<select id="states">
+			
+			
+		</select>
+	
+	</div>	
+	<div>
+		<p>Select LGA</p>
+		<select id="lga">
+			
+			
+		</select>
+	
+	</div>
+	
+	<div>
+		<p>LGA's in the state</p>
+		<ol id="lga-list">
+			
+		</ol>
+	</div>
 
-	<select id="lga">
-		
-		
-	</select>
 </body>
-<script type="text/javascript" src="nigeria.js"></script>
+	<script type="text/javascript" src="nigeria.json"></script>
+	<script type="text/javascript" src="nigeria.js"></script>
 </html>

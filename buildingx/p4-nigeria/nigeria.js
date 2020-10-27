@@ -3,6 +3,7 @@ console.log(nigeria)
 let nigeria_state = document.getElementById('states')
 
 let state_local_government = document.getElementById('lga')
+let state_local_government_list = document.getElementById('lga-list')
 
 for( index in nigeria )
 {
@@ -27,6 +28,9 @@ nigeria_state.addEventListener('click', (e) => {
 
 		console.log(state_index, state_lga, state_lga[0].name)
 
+		state_local_government_list.innerHTML = ""
+		state_local_government.innerHTML = ""
+
 		for( lga in state_lga )
 		{
 			let option = document.createElement("option")
@@ -34,6 +38,12 @@ nigeria_state.addEventListener('click', (e) => {
 			option.textContent = state_lga[lga].name
 
 			state_local_government.appendChild(option)
+
+
+			let listItem = document.createElement("li")
+			listItem.textContent = state_lga[lga].name
+			
+			state_local_government_list.appendChild(listItem)
 		}
 	}
 })
