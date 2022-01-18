@@ -27,16 +27,21 @@ const leftButtonElement = document.getElementById("left")
 const rightButtonElement = document.getElementById("right")
 
 function setNewImage(imgIndex){
-    const imgElement = document.createElement("img")
-
     const sliderElement = document.getElementById("slider")
+    const imgElement = document.createElement("img")
+    const pElement = document.createElement("p")
 
     imgElement.setAttribute("src", data[imgIndex].url )
     imgElement.setAttribute("alt", data[imgIndex].alt )
-    imgElement.setAttribute("width", "400px" )
-    imgElement.setAttribute("height", "400px" )
+    imgElement.setAttribute("width", "600px" )
+    imgElement.setAttribute("height", "600px" )
+
+
     sliderElement.innerHTML = ""
     sliderElement.appendChild(imgElement)
+
+    pElement.textContent = data[imgIndex].alt
+    sliderElement.appendChild(pElement)
 }
 
 setNewImage(currentImgIndex)
