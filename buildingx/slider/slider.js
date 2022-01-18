@@ -21,7 +21,10 @@ const data = [
     },
 ]
 
+let lastIndex = data.length - 1
 let currentImgIndex = 0
+const leftButtonElement = document.getElementById("left")
+const rightButtonElement = document.getElementById("right")
 
 function setNewImage(imgIndex){
     const imgElement = document.createElement("img")
@@ -30,17 +33,25 @@ function setNewImage(imgIndex){
 
     imgElement.setAttribute("src", data[imgIndex].url )
     imgElement.setAttribute("alt", data[imgIndex].alt )
-    imgElement.setAttribute("width", "200px" )
-    imgElement.setAttribute("height", "200px" )
-
+    imgElement.setAttribute("width", "400px" )
+    imgElement.setAttribute("height", "400px" )
+    sliderElement.innerHTML = ""
     sliderElement.appendChild(imgElement)
 }
 
 setNewImage(currentImgIndex)
 
-const leftButtonElement = document.getElementById("left")
-const rightButtonElement = document.getElementById("right")
+
 
 leftButtonElement.addEventListener("click", (e) => {
     currentImgIndex--
+    if(currentImgIndex < 0) currentImgIndex = lastIndex
+
+    setNewImage(currentImgIndex)
+})
+rightButtonElement.addEventListener("click", (e) => {
+    currentImgIndex++
+    if(currentImgIndex > lastIndex) currentImgIndex = 0
+
+    setNewImage(currentImgIndex)
 })
