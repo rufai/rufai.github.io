@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 200px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    letter-spacing: 30px;
+    line-height: 50px;
+}
+
+.given_phrase {
+    
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

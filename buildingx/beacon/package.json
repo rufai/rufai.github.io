@@ -1,0 +1,28 @@
+{
+  "name": "beacon",
+  "version": "1.0.0",
+  "description": "learn how to type faster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rufai/beacon.git"
+  },
+  "keywords": [
+    "type",
+    "keyboard",
+    "learn",
+    "wpm"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rufai/beacon/issues"
+  },
+  "homepage": "https://github.com/rufai/beacon#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
