@@ -10,8 +10,9 @@ body {
     line-height: 50px;
 }
 
-.given_phrase {
-    
+h1 {
+    letter-spacing: normal;
+    text-decoration: underline;
 }
 
 .green {
