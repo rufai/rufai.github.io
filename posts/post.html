@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <title>A quick note on .editorconfig</title>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel=stylesheet>
+    <link rel=stylesheet href=css/normalize.css>
+    <link rel=stylesheet href=css/skeleton.css>
+    <link rel=stylesheet href=css/zenburn.css>
+    <link rel=stylesheet href=css/custom.css>
+</head>
+
+<body>
+    <div class=container>
+        <header>
+            <div class=row>
+                <div id=logo class="three columns">
+                    <div id=menu><img src=images/hamburger.png></div>
+                    <h3><a href="/">/slash</a></h3>
+                </div>
+                <nav class="nine columns">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href=#>RSS Feed</a></li>
+                        <li><a href=http://gum.co/Sxoj class=bordered>Consuming REST APIs - a soft introduction</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class=row>
+            <div class="six offset-by-three columns">
+                <article>
+                    <date>23 Mar, 2015</date>
+                    <h1 class=title>A quick note on .editorconfig</h1>
+                    <p>I really love <a href=http://obem.be/2012/09/29/code-indention-it-is-this-simple.html>good code
+                            indentation</a>. And writing a good code starts from a good indentation. While this is a
+                        conscious effort, your editor can make it very easy. And that is where <a
+                            href="http://editorconfig.org/">EditorConfig</a> comes in. EditorConfig allows you define
+                        style rules an editor should adhere to. This makes it easy to have a consistent style even
+                        across editors.</p>
+                    <p>In its simplest form, you create an “<strong>.editorconfig</strong>” file that will contain the
+                        rules in your source directory. (This means you can have different rules for different
+                        projects/directory). Here is the EditorConfig file for a <a
+                            href=https://github.com/kehers/fave>sample project</a>:</p>
+                    <div class=highlight>
+                        <pre><code class=language-text data-lang=text>root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false</code></pre>
+                    </div>
+                    <p>As you will notice, the syntax is simple and self-explanatory. The rule simply says - for all
+                        file types (<strong>*</strong>), use 2 spaces for indentation, remove trailing spaces and end
+                        the file with a new line. For <strong>.md</strong> (markdown) files, don’t remove trailing
+                        spaces. (Remember, trailing spaces in markdown is used to differentiate line breaks and
+                        paragraphs). Here is a <a
+                            href=https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties>complete list
+                            of EditorConfig properties</a>.</p>
+                    <p>Note however that not all editors have inbuilt support for these rules. Yet. But there are
+                        plugins you can install to enable it. For Sublime text (my editor on Mac), you can install
+                        <code>EditorConfig</code> via Package control. If you don’t have Package control, see <a
+                            href=https://packagecontrol.io/installation>installation details here</a>. For Notepad++ (my
+                        editor on Windows), see installation details <a
+                            href=https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme>here</a>.</p>
+                    <p>The real beauty of EditorConfig comes when you work in a team. Because individuals have their own
+                        indentation style, it is easy to have a mix of different styles. Some will use tabs for
+                        indentation, others spaces. (I recommend spaces). Even for spaces, some will use 2 spaces,
+                        others 4. Editorconfig can help achieve a unique style across shared codes. A style can be
+                        agreed on, the EditorConfig file created based on that style and everyone ensures his/her editor
+                        is enabled for EditorConfig.</p>
+                    <p>Notes:</p>
+                    <ul>
+                        <li>While EditorConfig aims at allowing setting a consistent code “style”, I emphasized
+                            “indentation” in this post. Code style is a broader term. This include things like how
+                            brackets, arguments, control structures, keywords and closures are written, in what case
+                            (lower, upper, sentence) and how spaces should come in. EditorConfig won’t take care of this
+                            for you. That is something a developer or a team should agree on. If you are using PHP for
+                            example, the <a href="http://www.php-fig.org/psr/psr-2/">PSR2 coding style</a> is a good
+                            guide.</li>
+                        <li>My use of the term “editors” in this post also include IDEs.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class=colophon>
+        <div class=container>
+            <div class=row>
+                <div class="author six offset-by-three columns"><img
+                        src=https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xfp1/t51.2885-15/e15/10617063_553407278119581_1973098870_n.jpg
+                        class=avi>
+                    <p>My name is Opeyemi Obembe. I build things for web and mobile. You should follow me on Twitter (<a
+                            href=http://twitter.com/kehers>@kehers</a>).</p>
+                </div>
+            </div>
+            <div class="row p-t-20">
+                <div class="six offset-by-three columns">
+                    <article class=m-t-20>
+                        <h4 class="title m-b-20">Next</h4>
+                        <h5 class="libre no-margin"><a href=#>Recording audio in browser</a></h5>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class=container>
+            <div class=row>
+                <div class="three offset-by-three columns"><a href="/">/slash</a></div>
+                <div class="three columns"><a href=http://twitter.com/kehers>Twitter</a> · <a
+                        href=http://github.com/kehers>Github</a> · <a href=http://instagram.com/kehers>Instagram</a> ·
+                    <a href=http://500px.com/kehers>500px</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src=js/menu.js></script>
+</body>
+
+</html>
