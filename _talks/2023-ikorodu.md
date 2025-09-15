@@ -1,0 +1,57 @@
+---
+title: "How To Conduct Extensive Web App Penetration Testing"
+collection: talks
+type: "Talk"
+permalink: /talks/2023-ikorodu
+venue: "Google I/O Conference"
+date: 2023-19-08
+location: " Ikorodu, Lagos"
+---
+
+# How to Conduct Extensive Web App Penetration Testing
+
+Web application penetration testing involves simulating real-world cyberattacks to identify and fix vulnerabilities before attackers can exploit them. Here's a concise guide to conducting thorough testing:
+
+## 1. **Planning and Reconnaissance**
+- Define scope, goals, and permissions.
+- Perform passive and active reconnaissance (e.g., WHOIS, subdomain enumeration, tech stack identification).
+
+## 2. **Threat Modeling**
+- Identify potential attack vectors based on app architecture.
+- Prioritize targets using risk-based analysis.
+
+## 3. **Vulnerability Scanning**
+- Use automated tools (e.g., OWASP ZAP, Burp Suite) to detect common issues.
+- Check for outdated libraries, misconfigurations, and insecure headers.
+
+## 4. **Manual Testing**
+- Test for OWASP Top 10 vulnerabilities:
+  - SQL Injection
+  - XSS (Cross-Site Scripting)
+  - CSRF (Cross-Site Request Forgery)
+  - Authentication and session flaws
+- Validate input handling, business logic flaws, and access controls.
+
+## 5. **Exploitation**
+- Attempt to exploit identified vulnerabilities to verify impact.
+- Maintain detailed logs of payloads, tools, and outcomes.
+
+## 6. **Post-Exploitation**
+- Assess lateral movement potential.
+- Test privilege escalation and data exfiltration risks.
+
+## 7. **Reporting**
+- Document findings with severity levels, evidence, and remediation advice.
+- Prioritize fixes and provide actionable steps for developers.
+
+## 8. **Retesting**
+- After fixes are applied, retest vulnerabilities to confirm resolution.
+
+## Tools to Consider
+- Burp Suite, OWASP ZAP, Nikto, Nmap, Metasploit, sqlmap, Dirb/Gobuster.
+
+## Best Practices
+- Follow ethical guidelines and get proper authorization.
+- Continuously update skills and tools.
+- Integrate testing into the SDLC (DevSecOps).
+
