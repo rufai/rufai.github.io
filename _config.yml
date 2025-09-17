@@ -23,7 +23,7 @@ repository               : "rufai/rufai.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "mrufai.jpg"
+  avatar           : "mrufai.png"
   name             : "Rufai, Mustapha"
   pronouns         : # example: "she/her"  
   # bio              : ""
