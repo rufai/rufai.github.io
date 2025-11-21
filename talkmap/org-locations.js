@@ -5,7 +5,7 @@ var addressPoints = [
     3.5623861
   ],
   [
-    "Banking Without Banks? Building Resilient Wallet Infrastructure in Unstable Times<br />API Conf Gbagada; Gbagada, Lagos",
+    "Surviving API Chaos: How Fintechs Pivoted Fast After Providus Shutdown<br />API Conf Gbagada; Gbagada, Lagos",
     6.558073,
     3.3836208
   ],
