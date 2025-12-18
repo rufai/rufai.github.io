@@ -3,13 +3,340 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rufai Mustapha</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Rufai Mustapha - Software Engineer & Technical Educator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+        --success-color: #2ecc71;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: #f8f9fa;
+        color: var(--dark-color);
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px; /* Increased vertical padding */
+    }
+    
+    nav {
+        background-color: var(--primary-color);
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 5px 0;
+        position: relative;
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+    }
+    
+    header {
+        text-align: center;
+        padding: 50px 0; /* Increased padding */
+        background-color: var(--primary-color);
+        color: white;
+        margin-bottom: 60px; /* Increased margin */
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 10px auto;
+    }
+    
+    header p a {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    /* New styles for the highlights section */
+    .highlights-section {
+        text-align: left;
+        margin-bottom: 60px; /* Increased margin */
+    }
+
+    .highlights-section h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 10px;
+    }
+    
+    .highlights-section ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .highlights-section li {
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-left: 5px solid var(--secondary-color);
+    }
+    
+    .impact-stats {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 60px; /* Increased margin */
+        background-color: white;
+        padding: 40px; /* Increased padding */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .stat-item {
+        text-align: center;
+        padding: 15px;
+        min-width: 150px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        margin-bottom: 5px;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+        color: var(--dark-color);
+    }
+    
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: var(--secondary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 3px;
+    }
+    
+    .timeline-item {
+        padding: 20px 40px; /* Increased vertical padding */
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -12px;
+        background-color: white;
+        border: 4px solid var(--secondary-color);
+        top: 22px; /* Adjusted for new padding */
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .left {
+        left: 0;
+    }
+    
+    .right {
+        left: 50%;
+    }
+    
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 30px; /* Adjusted */
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+    
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 30px; /* Adjusted */
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    
+    .right::after {
+        left: -12px;
+    }
+    
+    .content {
+        padding: 25px 30px; /* Increased padding */
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    
+    .content h2 {
+        margin-top: 0;
+        color: var(--primary-color);
+        font-size: 1.4rem;
+    }
+    
+    .content .date {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .content .role {
+        font-weight: bold;
+        color: var(--dark-color);
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    
+    .content .organization {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+    }
+    
+    .content .impact {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px dashed #ddd;
+    }
+    
+    .content .impact h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: var(--success-color);
+    }
+    
+    .content .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .tag {
+        background-color: #f1f1f1;
+        color: #333;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+    }
+    
+    .content a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+    
+    .content a:hover {
+        text-decoration: underline;
+    }
+    
+    .links {
+        margin-top: 15px;
+    }
+    
+    .links a {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 50px;
+        color: #666;
+    }
+    
+    /* Media queries for responsive design */
+    @media screen and (max-width: 768px) {
+        .timeline::after {
+            left: 31px;
+        }
+        
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        .timeline-item::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .left::after, .right::after {
+            left: 19px;
+        }
+        
+        .right {
+            left: 0%;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+    }
+  </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a>
-    <a href="educator.html">Educator</a>
     <a href="conferences.html">Conferences</a>
     <a href="publications.html">Publications</a>
     <a href="projects.html">Projects</a>
@@ -21,18 +348,421 @@
     <p>Email: <a href="mailto:mtrufai@outlook.com">mtrufai@outlook.com</a> | 
        LinkedIn: <a href="https://www.linkedin.com/in/mustapha-rufai/">mrufai</a> | 
   </header>
-
-  <main>
-    <p>Rufai is a software engineer who loves teaching.</p>
+  
+  <div class="container">
+    <div class="highlights-section">
+        <h2>Highlights</h2>
+        <ul>
+          <li>In the past, Developer Community @ <strong>Paga</strong> (10,000+ devs)</li>
+          <li> Instructor @ <strong>LinkedIn Learning (U.S.)</strong> & <strong>Pluralsight</strong></li>
+          <li>Speaker @ <strong>FOSS Backstage 2026</strong> (Berlin), <strong>Write the Docs Prague</strong>, <strong>SailsConf Africa</strong></li>
+          <li>Partner, <strong>Sandalili</strong> (edtech startup)</li>
+          <li>Mentor, <strong>Google Africa Developer Scholarship (GADS)</strong></li>
+        </ul>
+    </div>
     
-    <h2>Highlights</h2>
-    <ul>
-      <li>In the past, Developer Community @ <strong>Paga</strong> (10,000+ devs)</li>
-      <li> Instructor @ <strong>LinkedIn Learning (U.S.)</strong> & <strong>Pluralsight</strong></li>
-      <li>Speaker @ <strong>FOSS Backstage 2026</strong> (Berlin), <strong>Write the Docs Prague</strong>, <strong>SailsConf Africa</strong></li>
-      <li>Partner, <strong>Sandalili</strong> (edtech startup)</li>
-      <li>Mentor, <strong>Google Africa Developer Scholarship (GADS)</strong></li>
-    </ul>
-  </main>
+    <div class="impact-stats">
+        <div class="stat-item">
+            <div class="stat-number">1,500+</div>
+            <div class="stat-label">Students Taught</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Countries Reached</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Years Teaching</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50K+</div>
+            <div class="stat-label">Article Views</div>
+        </div>
+    </div>
+    
+    <div class="timeline">
+        <!-- FOSS Backstage 2026 -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2026 (Upcoming)</span>
+                <h2>Speaker</h2>
+                <div class="role">"Exploring Open Source Beyond the Code"</div>
+                <div class="organization">FOSS Backstage 2026 (Berlin)</div>
+                <p>Accepted to speak as the only African speaker at this prestigious open source conference.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Representing African perspectives on the global open source stage, highlighting the continent's contributions to the open source movement.</p>
+                </div>
+                <div class="links">
+                    <a href="https://26.foss-backstage.de/speaker/mustapha-rufai/" target="_blank">
+                        <i class="fas fa-globe"></i> Speaker Page
+                    </a>
+                    <a href="https://program.foss-backstage.de/fossback26/me/submissions/N7WTHZ/" target="_blank">
+                        <i class="fas fa-file-alt"></i> Proposal
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Global Conference</span>
+                    <span class="tag">African Representation</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stanford Code in Place -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2025</span>
+                <h2>Section Leader</h2>
+                <div class="role">Python Programming Education</div>
+                <div class="organization">Stanford Code in Place</div>
+                <p>Guided global learners in Python programming (CS106A) as part of Stanford's free introductory computer science course.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Contributed to democratizing computer science education by helping teach thousands of students worldwide in collaboration with Stanford University.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Computer Science</span>
+                    <span class="tag">Global Education</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rise Academy -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2025</span>
+                <h2>Backend Lead</h2>
+                <div class="role">Technical Education</div>
+                <div class="organization">Rise Academy</div>
+                <p>Led backend development training with one student securing a position at Meta before graduation.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Demonstrated exceptional teaching quality by preparing students for top-tier tech companies, highlighting the effectiveness of the training approach.</p>
+                </div>
+                <div class="links">
+                    <a href="https://risevest.com/academy" target="_blank">
+                        <i class="fas fa-globe"></i> Rise Academy Page
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Backend Development</span>
+                    <span class="tag">High-Impact Teaching</span>
+                    <span class="tag">Career Placement</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Future Clan Bootcamp -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2024</span>
+                <h2>Co-Instructor</h2>
+                <div class="role">Web Development Track Lead</div>
+                <div class="organization">Future Clan Bootcamp</div>
+                <p>Led web development curriculum for a national program with 1,000+ scholarship recipients sponsored by RCCG/Pastor E.A. Adeboye Foundation.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Provided technical education at scale for a major national digital skills initiative, helping to address the digital skills gap in Nigeria.</p>
+                </div>
+                <div class="links">
+                    <a href="https://www.thisdaylive.com/2024/06/13/over-1000-youths-benefit-from-adeboye-foundations-digital-skills-scholarship/" target="_blank">
+                        <i class="fas fa-newspaper"></i> Article
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1pY81bWVBaiVXw1nrtq5-HbW4c4epsDnW" target="_blank">
+                        <i class="fas fa-images"></i> Photos
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">Bootcamp</span>
+                    <span class="tag">National Program</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OSCA Ikeja -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2024</span>
+                <h2>Chapter Lead</h2>
+                <div class="role">Open Source Community Africa</div>
+                <div class="organization">OSCA Ikeja</div>
+                <p>Co-designed pan-African open source programs and accepted to speak at OSCA Fest 2025.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Contributing to open source education across Africa and fostering collaboration among developers.</p>
+                </div>
+                <div class="links">
+                    <a href="https://x.com/oscaikeja" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1MODQmoTT61MAAt1UJAGrkeCR0G1a-ieB" target="_blank">
+                        <i class="fas fa-folder"></i> Event Evidence
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Community Leadership</span>
+                    <span class="tag">Pan-African</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- API Conf Lagos -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2024</span>
+                <h2>Speaker</h2>
+                <div class="role">"Building Secure Fintech API: The Paga Approach"</div>
+                <div class="organization">API Conf Lagos 2024</div>
+                <p>Presented at Nigeria's first dedicated API event, sharing insights on secure API development in the fintech space.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Contributed to the knowledge sharing ecosystem in Nigeria's growing tech community.</p>
+                </div>
+                <div class="links">
+                    <a href="https://techmoonshot.com/2024/07/15/api-conference-lagos-2024-debuts-as-nigerias-first-dedicated-api-event/" target="_blank">
+                        <i class="fas fa-newspaper"></i> TechMoonshot
+                    </a>
+                    <a href="https://sessionize.com/mustapha-rufai/" target="_blank">
+                        <i class="fas fa-user"></i> Sessionize
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">API Development</span>
+                    <span class="tag">Fintech</span>
+                    <span class="tag">Public Speaking</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SailsConf Africa -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2024</span>
+                <h2>Speaker</h2>
+                <div class="role">"Optimizing JavaScript for Performance"</div>
+                <div class="organization">SailsConf Africa 2024</div>
+                <p>Delivered a technical talk on JavaScript optimization for mid/senior African engineers.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Enhanced the technical skills of African developers, contributing to the growth of the continent's tech ecosystem.</p>
+                </div>
+                <div class="links">
+                    <a href="https://sailsconf.com/af" target="_blank">
+                        <i class="fas fa-globe"></i> Website
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1lYNTE3Zzpp85XAo7e0YKGuEl9_GZNtSs" target="_blank">
+                        <i class="fas fa-images"></i> Photos
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Performance</span>
+                    <span class="tag">Technical Education</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ReDI School -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2022, 2025</span>
+                <h2>Volunteer Instructor</h2>
+                <div class="role">Technical Education for Refugees</div>
+                <div class="organization">ReDI School</div>
+                <p>Assessed homework, performance, and final projects for refugees learning technical skills.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Supported refugee integration through technical education, providing valuable skills for employment and community contribution.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Refugee Education</span>
+                    <span class="tag">Volunteer Work</span>
+                    <span class="tag">Social Impact</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OSCA Fest 2022 -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2022</span>
+                <h2>Speaker</h2>
+                <div class="role">"Improving Developer Experience with Documentation"</div>
+                <div class="organization">OSCA Fest 2022</div>
+                <p>Presented on improving developer experience through effective documentation, with over 50 people registered for the session.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Shared knowledge on best practices for technical documentation, helping developers improve their skills in creating developer-friendly documentation.</p>
+                </div>
+                <div class="links">
+                    <a href="https://oscafest22.sched.com/speaker/etop94" target="_blank">
+                        <i class="fas fa-user"></i> Speaker Profile
+                    </a>
+                    <a href="https://oscafest22.sched.com/event/ywTa/improving-developer-experience-with-documentation" target="_blank">
+                        <i class="fas fa-calendar"></i> Event Page
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Documentation</span>
+                    <span class="tag">Developer Experience</span>
+                    <span class="tag">Open Source</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Write the Docs Prague -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2022</span>
+                <h2>Co-presenter</h2>
+                <div class="role">"Creating Documentation for the African Audience"</div>
+                <div class="organization">Write the Docs Prague 2022</div>
+                <p>Co-presented at a global conference on creating documentation tailored for African audiences.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Highlighted the importance of culturally relevant documentation and contributed to global knowledge sharing practices.</p>
+                </div>
+                <div class="links">
+                    <a href="https://www.writethedocs.org/videos/prague/2022/creating-documentation-for-the-african-audience-benny-ifeanyi-iheagwara/" target="_blank">
+                        <i class="fas fa-video"></i> Video
+                    </a>
+                    <a href="https://drive.google.com/file/d/1CVrWfkhyHX_uHQi6vNpjvxg5mCwlIdbL" target="_blank">
+                        <i class="fas fa-file-pdf"></i> PDF
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Documentation</span>
+                    <span class="tag">Global Conference</span>
+                    <span class="tag">Cultural Adaptation</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Black CodHer -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2021-2022</span>
+                <h2>Technical JavaScript Trainer</h2>
+                <div class="role">Mentorship for Black Women in Tech</div>
+                <div class="organization">Black CodHer (UK)</div>
+                <p>Provided technical JavaScript training and mentorship for Black women entering the tech industry.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Contributed to diversity and inclusion in tech by providing specialized training and support for underrepresented groups.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Diversity & Inclusion</span>
+                    <span class="tag">Mentorship</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enugu TECH Program -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2021</span>
+                <h2>Lead Programming Instructor</h2>
+                <div class="role">Technical Education for Youth</div>
+                <div class="organization">Enugu TECH Program</div>
+                <p>Trained 500+ youths in programming in partnership with Utiva, with curriculum adopted by the Enugu State Government.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Created sustainable technical education program adopted at government level, impacting hundreds of youths and creating a model for other states.</p>
+                </div>
+                <div class="links">
+                    <a href="https://www.vanguardngr.com/2021/08/smes-enugu-govt-to-train-additional-500-youths-in-programming-and-product-design/" target="_blank">
+                        <i class="fas fa-newspaper"></i> Vanguard Article
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Programming</span>
+                    <span class="tag">Government Partnership</span>
+                    <span class="tag">Curriculum Development</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pluralsight -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2021</span>
+                <h2>Academy Instructor</h2>
+                <div class="role">Curriculum Development and Instruction</div>
+                <div class="organization">Pluralsight (U.S.)</div>
+                <p>Created curricula and delivered Instructor-Led Training (ILT) and Virtual Instructor-Led Training (VILT) for global learners.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Reached a global audience through a major tech education platform, contributing to the professional development of developers worldwide.</p>
+                </div>
+                <div class="tags">
+                    <span class="tag">Curriculum Development</span>
+                    <span class="tag">Global Education</span>
+                    <span class="tag">Corporate Training</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LinkedIn Learning -->
+        <div class="timeline-item right">
+            <div class="content">
+                <span class="date">2021</span>
+                <h2>Frontend Technical Author</h2>
+                <div class="role">Course Creation</div>
+                <div class="organization">LinkedIn Learning (U.S.)</div>
+                <p>Created frontend development courses consumed globally by professionals.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Contributed to the professional development of developers worldwide through accessible, high-quality technical education content.</p>
+                </div>
+                <div class="links">
+                    <a href="https://www.linkedin.com/learning/instructors/mustapha-rufai" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Frontend Development</span>
+                    <span class="tag">Course Creation</span>
+                    <span class="tag">Professional Education</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- freeCodeCamp Publications -->
+        <div class="timeline-item left">
+            <div class="content">
+                <span class="date">2020-2021</span>
+                <h2>Technical Author</h2>
+                <div class="role">Educational Content Creation</div>
+                <div class="organization">freeCodeCamp</div>
+                <p>Authored 5 technical articles on topics including BBC Sports, SVG Map, HTTP, and more, accumulating 50K+ views.</p>
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Created valuable educational resources accessed by thousands of developers worldwide, contributing to the free coding education movement.</p>
+                </div>
+                <div class="links">
+                    <a href="https://www.freecodecamp.org/news/author/mrufai/" target="_blank">
+                        <i class="fas fa-globe"></i> Author Page
+                    </a>
+                </div>
+                <div class="tags">
+                    <span class="tag">Technical Writing</span>
+                    <span class="tag">Educational Content</span>
+                    <span class="tag">Open Education</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+        <p>&copy; Rufai Mustapha | Teaching & Speaking Timeline</p>
+    </div>
+  </footer>
 </body>
 </html>
